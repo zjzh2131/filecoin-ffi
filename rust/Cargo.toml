@@ -35,7 +35,8 @@ bellperson = { version = "0.21", default-features = false }
 serde_json = "1.0.46"
 memmap = "0.7"
 rust-gpu-tools = { version = "0.5", default-features = false }
-storage-proofs-porep = { version = "~11.1", default-features = false }
+#storage-proofs-porep = { version = "~11.1", default-features = false }
+storage-proofs-porep = { path = "../../../../rust-fil-proofs/storage-proofs-porep", default-features = false }
 fr32 = { version = "~4.1", default-features = false }
 fvm = { version = "1.0.0", default-features = false }
 fvm_ipld_car = "0.4.1"
@@ -55,8 +56,9 @@ futures = "0.3.5"
 safer-ffi = { version = "0.0.7", features = ["proc_macros"] }
 
 [dependencies.filecoin-proofs-api]
-package = "filecoin-proofs-api"
-version = "11.1"
+#package = "filecoin-proofs-api"
+#version = "11.1"
+path = "../../../../rust-filecoin-proofs-api"
 default-features = false
 
 [dev-dependencies]
