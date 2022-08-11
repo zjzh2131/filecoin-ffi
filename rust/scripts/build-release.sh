@@ -41,6 +41,9 @@ main() {
     RUSTFLAGS="${__rust_flags}" \
         cargo +$2 $3 \
         --release --locked ${@:4} 2>&1 | tee ${__build_output_log_tmp}
+#    RUSTFLAGS="${__rust_flags}" \
+#        cargo +$2 $3 \
+#        --locked ${@:4} 2>&1 | tee ${__build_output_log_tmp}
 
     # parse build output for linker flags
     #
